@@ -1,0 +1,6 @@
+torch
+sklearn
+mlflow
+azure-storage
+azure-storage-blob
+azure-identity
