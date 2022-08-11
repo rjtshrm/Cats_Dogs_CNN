@@ -13,11 +13,13 @@ from dataset import DS
 parser = argparse.ArgumentParser()
 
 parser.add_argument("--epoch", type=int, default=10)
-parser.add_argument("--lr", type=float, default=0.01)
+parser.add_argument("--lr", type=float, default=0.0001)
 parser.add_argument("--mlflow_host", type=str, default="http://127.0.0.1:5000/")
+parser.add_argument("--ds_path", type=str, required=True)
 
 args = vars(parser.parse_args())
 
+print(args)
 
 mlflow.set_registry_uri(args["mlflow_host"])
 mlflow.set_tracking_uri(args["mlflow_host"])
@@ -38,8 +40,9 @@ with mlflow.start_run():
     criterion = BCELoss()
     optim = Adam(model.parameters(), lr=lr)
 
-    tdl = DataLoader(DS("/home/rajat/Desktop/ops/ml/data_generator/code/Cat_Dog/Train"), batch_size=16, shuffle=True)
-    vdl = DataLoader(DS("/home/rajat/Desktop/ops/ml/data_generator/code/Cat_Dog/Val"), batch_size=16, shuffle=True)
+    ds_path = args["ds_path"]
+    tdl = DataLoader(DS(f"{ds_path}/Train"), batch_size=16, shuffle=True)
+    vdl = DataLoader(DS(f"{ds_path}/Val"), batch_size=16, shuffle=True)
 
     for e in range(epoch):
         training_running_loss = 0.0
@@ -89,8 +92,7 @@ with mlflow.start_run():
             mlflow.log_metric("Validation loss", validation_running_loss / (i + 1), e)
             mlflow.log_metric("Validation accuracy", accuracy, e)
 
-    torch.save(lr_model.state_dict(), "../../deployment/model.pt")
-    #mlflow.pytorch.log_model(lr_model, "models")
+    mlflow.pytorch.log_model(model, "model")
 
 
 

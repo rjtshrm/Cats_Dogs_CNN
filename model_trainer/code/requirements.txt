@@ -1,6 +1,6 @@
 torch
 sklearn
 mlflow
-azure-storage
+pillow
 azure-storage-blob
 azure-identity

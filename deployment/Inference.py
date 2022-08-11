@@ -1,16 +1,20 @@
+import os
 from io import BytesIO
 import PIL.Image as Image
 import base64
 
 import numpy as np
 import torch
-from model import LR
+import mlflow
 
 class Inference(object):
     def __init__(self):
         self.device = 'cpu'
-        self.model = LR().to(self.device)
-        self.model.load_state_dict(torch.load("./model.pt"))
+        mlflow.set_tracking_uri("http://20.28.195.42/mlflow/")
+        mlflow.set_registry_uri("http://20.28.195.42/mlflow/")
+        self.model_path = f"runs:/{os.environ['RUN_ID']}/models"
+        self.model = mlflow.pytorch.load_model(self.model_path)
+        print(self.model)
 
     def predict(self, X, feature_names):
         X = X[0].encode()

@@ -1,4 +1,4 @@
-From ubuntu:20.04
+From python:3.8
 
 RUN  apt-get update  && apt install python3-pip -y
 

@@ -14,8 +14,9 @@ EXPOSE 5000
 EXPOSE 9000
 
 # Define environment variables
-ENV MODEL_NAME MyModel
+ENV MODEL_NAME Inference
 ENV SERVICE_TYPE MODEL
+ENV RUN_ID
 
 
 # Changing folder to default user

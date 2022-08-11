@@ -29,4 +29,4 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--data_dir", type=str, required=True)
     args = parser.parse_args()
-    download("https://www.dropbox.com/s/4si2ixdtdgabqnt/Cat_Dog.zip?dl=1", args.data_dir)
+    download("https://www.dropbox.com/s/hvdltbkdyyfzxwb/Cat_Dog.zip?dl=1", args.data_dir)

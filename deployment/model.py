@@ -5,10 +5,10 @@ import torch
 import torch.nn as nn
 
 
-class LR(nn.Module):
+class Model(nn.Module):
 
     def __init__(self):
-        super(LR, self).__init__()
+        super(Model, self).__init__()
 
 
         self.cnns_2_flatten = nn.Sequential(
