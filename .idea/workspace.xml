@@ -2,23 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d9b993e4-a73a-4dee-aa77-13e5cd9ead50" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/model_trainer/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model_trainer/build.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_generator/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/data_generator/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_generator/build.sh" beforeDir="false" afterPath="$PROJECT_DIR$/data_generator/build.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_generator/code/gen.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_generator/code/gen.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deployment/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/deployment/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deployment/Inference.py" beforeDir="false" afterPath="$PROJECT_DIR$/deployment/Inference.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deployment/model.pt" beforeDir="false" afterPath="$PROJECT_DIR$/deployment/model.pt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deployment/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/deployment/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deployment/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/deployment/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/evaluator/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kf/pipeline.py" beforeDir="false" afterPath="$PROJECT_DIR$/kubeflow/pipeline.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kf/pvc.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/kubeflow/pvc.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kf/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/kubeflow/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model_trainer/code/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/model_trainer/code/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model_trainer/code/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/model_trainer/code/train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kubeflow/pipeline.py" beforeDir="false" afterPath="$PROJECT_DIR$/kubeflow/pipeline.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

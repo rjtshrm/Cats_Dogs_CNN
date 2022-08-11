@@ -46,7 +46,7 @@ class MLPipeline:
                   description="A cat and dog Classification pipeline on Kubefllow",)
     def pipeline(self,):
         data_generator_step = self.data_generator()
-        data_preprocessor_step = self.trainer().after(data_generator_step)
+        trainer = self.trainer().after(data_generator_step)
 
 
     def pipeline_start(self):
